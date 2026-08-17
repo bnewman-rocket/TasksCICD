@@ -1,4 +1,4 @@
-@echo off
+@echo on
 echo git_action being called here
 git add .
 if errorlevel 1 exit /b %errorlevel%
