@@ -4,9 +4,9 @@
         {
             "label": "Git Commit",
             "type": "shell",
-            "command": "call \"C:\\Program Files (x86)\\Rocket Software\\Visual COBOL\\SetupEnv.bat\" 64 && git add . && git commit -m \"${input:commitMessage}\" && git push",
+            "command": "call \"${workspaceFolder}\\git_action.bat\" \"${input:commitMessage}\"",
             "options": {
-                "cwd": "${fileDirname}", // Needed if using the 1st "command" line
+                "cwd": "${workspaceFolder}",
                 "shell": {
                     "executable": "cmd.exe",
                     "args": [
