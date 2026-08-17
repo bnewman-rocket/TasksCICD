@@ -1,10 +1,11 @@
+// C:\Users\bnewman\AppData\Roaming\Code\User - for keybindings.json
 {
     "version": "2.0.0",
     "tasks": [
         {
             "label": "Git Commit",
             "type": "shell",
-            "command": "call \"${workspaceFolder}\\git_action.bat\" \"${input:commitMessage}\"",
+            "command": "call \"${workspaceFolder}\\git_push.bat\" \"${input:commitMessage}\"",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "shell": {
