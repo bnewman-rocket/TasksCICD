@@ -1,0 +1,16 @@
+       identification division.
+       program-id. BasicProgram.
+
+       environment division.
+       configuration section.
+
+       data division.
+       working-storage section.
+
+       procedure division.
+       main section.
+           display "Hello, World!"
+           goback
+           .
+
+       end program BasicProgram.

@@ -1,0 +1,47 @@
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//         {
+//             "label": "Git Commit",
+//             "type": "shell",
+//             "command": "git add . && git commit -m \"${input:commitMessage}\"",
+//             "problemMatcher": []
+//         }
+//     ],
+//     "inputs": [
+//         {
+//             "id": "commitMessage",
+//             "type": "promptString",
+//             "description": "Commit message"
+//         }
+//     ]
+// }
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Print X",
+            "type": "shell",
+            "command": "echo \"${input:echo_prompt}\"",
+            "problemMatcher": []
+        },
+        {
+            "label": "Git Commit",
+            "type": "shell",
+            "command": "git add . && git commit -m \"${input:commitMessage}\"",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "echo_prompt",
+            "type": "promptString",
+            "description": "Echo prompt"
+        },
+        {
+            "id": "commitMessage",
+            "type": "promptString",
+            "description": "Commit message"
+        }
+    ]
+}
