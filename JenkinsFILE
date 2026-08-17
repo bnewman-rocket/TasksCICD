@@ -2,19 +2,26 @@ pipeline {
     agent any
 
     triggers {
-        pollSCM('* * * * *')
+        pollSCM("* * * * *")
     }
 
     stages {
-        stage('Checkout') {
+        stage("Debug") {
+            steps {
+                bat "dir"
+                bat "dir scripts"
+            }
+        },
+
+        stage("Checkout") {
             steps {
                 checkout scm
             }
         }
 
-        stage('Compile And Run') {
+        stage("Compile And Run") {
             steps {
-                bat 'call scripts\\compile_and_run.bat'
+                bat "call scripts\\compile_and_run.bat"
             }
         }
     }
