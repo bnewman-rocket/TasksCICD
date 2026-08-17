@@ -4,7 +4,7 @@
         {
             "label": "Git Commit",
             "type": "shell",
-            "command": "call \"C:\\Program Files (x86)\\Rocket Software\\Visual COBOL\\SetupEnv.bat\" 64 && git add . && git commit -m \"${input:commitMessage}\"",
+            "command": "call \"C:\\Program Files (x86)\\Rocket Software\\Visual COBOL\\SetupEnv.bat\" 64 && git add . && git commit -m \"${input:commitMessage}\" && git push",
             "options": {
                 // "cwd": "${fileDirname}", // Needed if using the 1st "command" line
                 "shell": {
