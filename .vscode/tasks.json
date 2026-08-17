@@ -5,7 +5,7 @@
         {
             "label": "Git Commit",
             "type": "shell",
-            "command": "call \"${workspaceFolder}\\git_push.bat\" \"${input:commitMessage}\"",
+            "command": "call \"${workspaceFolder}\\git_push.bat\" \"${input:commitMessage}\" && call \"${workspaceFolder}\\git_pull.bat\"",
             "options": {
                 "cwd": "${workspaceFolder}",
                 "shell": {
