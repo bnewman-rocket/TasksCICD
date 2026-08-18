@@ -13,7 +13,7 @@
            perform main
            .
        main section.
-           display "Hello, World!" upon console
+           display "Hello, World!"
            .
            goback
            .
