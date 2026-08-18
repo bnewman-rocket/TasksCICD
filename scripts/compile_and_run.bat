@@ -1,7 +1,7 @@
-@echo off
+echo off
 cls
 
-SET COBPATH=.;cobol
+@REM SET COBPATH=.;cobol
 
 call "C:\\Program Files (x86)\\Rocket Software\\Visual COBOL\\SetupEnv.bat"
 if errorlevel 1 exit /b %errorlevel%
