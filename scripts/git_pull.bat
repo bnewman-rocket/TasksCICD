@@ -1,3 +1,3 @@
-@echo on
+@echo off
 git pull
 if errorlevel 1 exit /b %errorlevel%
