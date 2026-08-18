@@ -1,4 +1,4 @@
-@echo off
+@echo on
 git add .
 if errorlevel 1 exit /b %errorlevel%
 git commit -m "%~1"
