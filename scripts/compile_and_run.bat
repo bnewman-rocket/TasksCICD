@@ -1,4 +1,5 @@
 @echo off
+cls
 
 SET COBPATH=.;cobol
 
