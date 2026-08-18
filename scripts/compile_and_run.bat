@@ -15,5 +15,5 @@ if errorlevel 1 (
 )
 
 echo --- Running 'cobol/basic_program.gnt' ---
-run "cobol/basic_program.gnt"
+run "./cobol/basic_program.gnt"
 if errorlevel 1 exit /b %errorlevel%
