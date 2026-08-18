@@ -21,7 +21,7 @@ pipeline {
 
         stage("Compile And Run") {
             steps {
-                bat "call scripts\\compile_and_run.bat"
+                bat "scripts\\compile_and_run.bat"
             }
         }
     }
