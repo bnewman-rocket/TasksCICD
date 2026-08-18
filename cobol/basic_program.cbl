@@ -8,6 +8,9 @@
        working-storage section.
 
        procedure division.
+
+           perform main
+           .
        main section.
            display "Hello, World!"
            goback
