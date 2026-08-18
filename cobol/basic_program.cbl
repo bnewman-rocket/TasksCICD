@@ -1,4 +1,4 @@
-       $set OUTDD("output.txt")
+      *$set OUTDD("output.txt")
        identification division.
        program-id. BasicProgram.
 
