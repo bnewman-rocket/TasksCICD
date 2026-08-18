@@ -10,12 +10,13 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/bnewman-rocket/TasksCICD.git'
+                // bat 'type README.md'
             }
         }
 
         stage('Compile And Run') {
             steps {
-                bat 'call C:\\Users\\bnewman\\Documents\\Dev\\TasksCICD\\scripts\\compile_and_run.bat'
+                bat 'call scripts\\compile_and_run.bat'
             }
         }
     }
