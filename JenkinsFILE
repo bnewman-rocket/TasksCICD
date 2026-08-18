@@ -2,26 +2,20 @@ pipeline {
     agent any
 
     triggers {
-        pollSCM("* * * * *")
+        pollSCM('* * * * *')
     }
 
     stages {
-        // stage("Debug") {
-        //     steps {
-        //         bat "dir"
-        //         bat "dir scripts"
-        //     }
-        // },
-
-        stage("Checkout") {
+        stage('Checkout') {
             steps {
-                checkout scm
+                git branch: 'main',
+                    url: 'https://github.com/bnewman-rocket/TasksCICD.git'
             }
         }
 
-        stage("Compile And Run") {
+        stage('Compile And Run') {
             steps {
-                bat "scripts\\compile_and_run.bat"
+                bat 'call C:\\Users\\bnewman\\Documents\\Dev\\TasksCICD\\scripts\\compile_and_run.bat'
             }
         }
     }
