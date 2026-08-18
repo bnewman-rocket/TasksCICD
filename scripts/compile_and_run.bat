@@ -9,10 +9,10 @@ cobol "cobol/basic_program.cbl" gnt;
 if errorlevel 1 (
     echo --- Compilation failed ---
     exit /b 1
+) else (
+    echo --- Compilation successful ---
 )
-echo --- Compilation successful ---
 
 echo --- Running 'cobol/basic_program.gnt' ---
-
 run "cobol/basic_program.gnt"
 if errorlevel 1 exit /b %errorlevel%
