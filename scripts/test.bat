@@ -1,5 +1,6 @@
 echo off
-findstr /C:"Hello, World!" output.txt
+@REM findstr /C:"Hello, World!" output.txt
+findstr /C:"%~1" output.txt
 if errorlevel 1 (
     echo TEST FAILED: Expected output was not found.
     exit /b 1
