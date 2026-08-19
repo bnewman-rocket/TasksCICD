@@ -1,6 +1,6 @@
-@REM echo off
+echo off
 
-set "DEPLOY_DIR=C:\Users\bnewman\Documents\Dev\TasksCICD\builds"
+set "DEPLOY_DIR=C:/Users/bnewman/Documents/Dev/TasksCICD/builds"
 set "BUILD_FILE=basic_program.gnt"
 
 if not exist "%DEPLOY_DIR%" (
@@ -11,7 +11,7 @@ if exist "%BUILD_FILE%" (
     echo "Found %BUILD_FILE%"
     if exist "%DEPLOY_DIR%" (
         echo "Found %DEPLOY_DIR%"
-        copy /Y "cobol\%BUILD_FILE%" "%DEPLOY_DIR%\%BUILD_FILE%"
+        @REM copy /Y "cobol/%BUILD_FILE%" "%DEPLOY_DIR%/%BUILD_FILE%"
     ) else (exit /b 1)
 ) else (exit /b 1)
 
