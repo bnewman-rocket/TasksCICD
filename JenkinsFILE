@@ -1,11 +1,19 @@
 pipeline {
     agent any
 
-    triggers {
-        pollSCM('* * * * *')
-    }
+    // triggers {
+    //     pollSCM('* * * * *')
+    // }
 
     stages {
+        
+        stage ('Reset Workspace') {
+            steps {
+                bat 'if exist output.txt ( del output.txt )'
+                bat 'if exist cobol\basic_program.gnt ( del cobol\basic_program.gnt )'
+            }
+        }
+        
         stage('Checkout') {
             steps {
                 git branch: 'main',
@@ -19,5 +27,25 @@ pipeline {
                 bat 'call scripts/compile_and_run.bat'
             }
         }
+        
+        stage('Test') {
+            steps {
+                bat 'call tests/run_tests.bat'
+            }
+        }
+        
+        stage('Archive') {
+            steps {
+                archiveArtifacts artifacts: 'output.txt, cobol/*.gnt', 
+                    fingerprint: true
+            }
+        }
+
+        stage('Deploy to Test') {
+            steps {
+                bat 'call scripts/deploy_build.bat'
+            }
+        }
+
     }
 }
