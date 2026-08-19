@@ -12,8 +12,14 @@ if exist "%BUILD_FILE%" (
     if exist "%DEPLOY_DIR%" (
         echo "Found %DEPLOY_DIR%"
         @REM copy /Y "cobol/%BUILD_FILE%" "%DEPLOY_DIR%/%BUILD_FILE%"
-    ) else (exit /b 1)
-) else (exit /b 1)
+    ) else (
+        echo "Failed to find %DEPLOY_DIR%"
+        exit /b 1
+    )
+) else (
+    echo "Failed to find %BUILD_FILE%"
+    exit /b 1
+)
 
 
 @REM echo off
