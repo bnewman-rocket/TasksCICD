@@ -1,12 +1,17 @@
-if not exist "C:/Users/bnewman/Documents/Dev/TasksCICD/builds" (
-    mkdir "C:/Users/bnewman/Documents/Dev/TasksCICD/builds"
+echo off
+
+set "DEPLOY_DIR=C:/Users/bnewman/Documents/Dev/TasksCICD/builds"
+set "BUILD_FILE=basic_program.gnt"
+
+if not exist "%DEPLOY_DIR%" (
+    mkdir "%DEPLOY_DIR%"
 )
 
-if exist "cobol/basic_program.gnt" (
-    echo "Found cobol/basic_program.gnt"
-    if exist "C:/Users/bnewman/Documents/Dev/TasksCICD/builds" (
-        echo "Found C:/Users/bnewman/Documents/Dev/TasksCICD/builds"
-        copy /Y "cobol/basic_program.gnt" "C:/Users/bnewman/Documents/Dev/TasksCICD/builds/basic_program.gnt"
+if exist "%BUILD_FILE%" (
+    echo "Found %BUILD_FILE%"
+    if exist "%DEPLOY_DIR%" (
+        echo "Found %DEPLOY_DIR%"
+        copy /Y "cobol\%BUILD_FILE%" "%DEPLOY_DIR%\%BUILD_FILE%"
     ) else (exit /b 1)
 ) else (exit /b 1)
 
