@@ -1,7 +1,7 @@
 echo off
 
 call "tests\test_for_string.bat" "Hello"
-if errorlevel 1 (exit /b 1)
+if errorlevel 1 ( type "output.txt" & exit /b 1 )
 
 call "tests\test_for_string.bat" "Hello, World!"
-if errorlevel 1 ( exit /b 1 )
+if errorlevel 1 ( type "output.txt" & exit /b 1 )
