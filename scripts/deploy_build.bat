@@ -13,8 +13,8 @@ if not exist "%DEPLOY_DIR%" (
 
 if exist "%BUILD_FILE%" (
     if exist "%DEPLOY_DIR%" (
-        copy /Y "%BUILD_FILE%" "%DEPLOY_DIR%"
+        @REM copy /Y "%BUILD_FILE%" "%DEPLOY_DIR%"
         copy /Y "output.txt" "%DEPLOY_DIR%\output.txt"
-        xcopy /E /I /Y "cobol" "%DEPLOY_DIR%\cobol"
+        xcopy /E /I /Y "cobol" "%DEPLOY_DIR%"
     ) else ( exit /b 1 )
 ) else ( exit /b 1 )
