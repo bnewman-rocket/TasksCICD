@@ -14,8 +14,8 @@
            .
        main section.
            display "Hello, World!"
-           display "What is happening? Hello"
-           display ", World!"
+      *    display "What is happening? Hello"
+      *    display ", World!"
            .
            goback
            .
