@@ -18,6 +18,7 @@ if exist "%BUILD_FILE%" (
     if exist "%DEPLOY_DIR%" (
         @REM echo "Found %DEPLOY_DIR%"
         copy /Y "%BUILD_FILE%" "%NEW_BUILD_FILE%"
+        copy /Y "output.txt" "%DEPLOY_DIR%\%BUILD_NUMBER%.txt"
     ) else (
         echo "Failed to find %DEPLOY_DIR%"
         exit /b 1
