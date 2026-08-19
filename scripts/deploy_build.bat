@@ -1,12 +1,11 @@
 echo off
 
-set "DEPLOY_DIR=C:\Users\bnewman\Documents\Dev\TasksCICD\builds"
-set "BUILD_FILE=cobol\basic_program.gnt"
-
 if "%BUILD_NUMBER%"=="" (
     set "BUILD_NUMBER=local"
 )
 
+set "DEPLOY_DIR=C:\Users\bnewman\Documents\Dev\TasksCICD\builds\%BUILD_NUMBER%"
+set "BUILD_FILE=cobol\basic_program.gnt"
 set "NEW_BUILD_FILE=%DEPLOY_DIR%\%BUILD_NUMBER%.gnt"
 
 if not exist "%DEPLOY_DIR%" (
