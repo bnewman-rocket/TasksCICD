@@ -1,6 +1,6 @@
 @REM echo off
 
-set "DEPLOY_DIR=C:/Users/bnewman/Documents/Dev/TasksCICD/builds"
+set "DEPLOY_DIR=C:\Users\bnewman\Documents\Dev\TasksCICD\builds"
 set "BUILD_FILE=basic_program.gnt"
 
 if not exist "%DEPLOY_DIR%" (
