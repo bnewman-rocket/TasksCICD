@@ -13,7 +13,9 @@
            perform main
            .
        main section.
-           display "Hello, World!"
+      *    display "Hello, World!"
+           display "What is happening? Hello"
+           display ", World!"
            .
            goback
            .
