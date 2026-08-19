@@ -1,4 +1,4 @@
-echo off
+@REM echo off
 
 set "DEPLOY_DIR=C:/Users/bnewman/Documents/Dev/TasksCICD/builds"
 set "BUILD_FILE=basic_program.gnt"
